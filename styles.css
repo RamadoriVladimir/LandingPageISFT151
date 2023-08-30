@@ -1,0 +1,101 @@
+/* Reset de estilos y estilos globales */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #3b50b6;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 20px;
+}
+
+main {
+  max-width: 800px; /* Ajusta este valor según tu diseño */
+  margin: 0 auto;
+  background-color: #fff; /* Cambiado para que el fondo sea blanco */
+  border-radius: 10px; /* Añadido para darle bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#inscripcion {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #3a92be;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para las carreras disponibles */
+.carrera {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contacto div {
+  padding: 10px;
+}
+
+#contacto p {
+  margin-bottom: 10px;
+}
+
+.mensaje-exito {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.oculto {
+  display: none;
+}
