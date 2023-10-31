@@ -45,6 +45,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  text-align: center;
 }
 
 #plandecarreras {
@@ -90,6 +91,15 @@ button[type="submit"] {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.seccionescarreras {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #3a92be;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
 /* Estilos para la sección de contacto */
 #contacto {
   margin-top: 20px;
@@ -133,9 +143,79 @@ header img {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave del color de fondo y transform */
+  display: block; /* Asegura que los botones ocupen todo el ancho */
+  margin: 0 auto; 
 }
 
 #mostrarPlanes:hover {
   background-color: #2a3a90; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+  transform: scale(1.1);
 }
+
+#logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mostrar-plan-button {
+  background-color: #3b50b6; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave del color de fondo y transform */
+  display: block; /* Asegura que los botones ocupen todo el ancho */
+  margin: 0 auto; /* Centra horizontalmente el botón */
+}
+
+.mostrar-plan-button:hover {
+  background-color: #2a3a90; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+  transform: scale(1.1); /* Aumenta el tamaño en un 10% al pasar el mouse */
+}
+
+/*Volver arriba */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.scroll-to-top button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+#scrollToTopButton:hover {
+  background-color: #2a3a90;
+}
+
+/*iconos */
+.social-icon {
+  height: 60px; 
+  margin: 5; 
+  filter: grayscale(100%); 
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  filter: grayscale(0%); 
+  transform: scale(1.2); 
+}
+
+
+
+
+
+

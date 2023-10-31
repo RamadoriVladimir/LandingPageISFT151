@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (planesCarrerasDiv.classList.contains("oculto")) {
             planesCarrerasDiv.classList.remove("oculto");
             mostrarPlanesButton.textContent = "Ocultar Planes";
-            
             // Agrega los enlaces de descarga de PDF aquí
             const enlacesPDF = `
                 <p><a href="https://drive.google.com/file/d/1gMN864FzwCqNwO3ZisISdvUWrWdZDlAM/view?usp=drive_web&authuser=1" target="_blank">Descargar Plan De Tecnicatura Superior en Análisis de Sistemas(PDF)</a></p>
@@ -26,3 +25,36 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const mostrarPlanButtons = document.querySelectorAll(".mostrar-plan-button");
+
+    mostrarPlanButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            const planUrl = button.getAttribute("data-plan-url");
+            window.open(planUrl, "_blank");
+        });
+    });
+});
+
+// Función para desplazarse hacia arriba suavemente
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Mostrar u ocultar el botón cuando el usuario se desplaza
+window.onscroll = function() {
+    var button = document.getElementById("scrollToTopButton");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+}
+
+// Asignar la función scrollToTop al botón
+var scrollToTopButton = document.getElementById("scrollToTopButton");
+scrollToTopButton.addEventListener("click", scrollToTop);
