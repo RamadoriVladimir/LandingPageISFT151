@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("CargarContenido", function() {
     const mostrarPlanesButton = document.getElementById("mostrarPlanes");
     const planesCarrerasDiv = document.getElementById("planesCarreras");
 
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (planesCarrerasDiv.classList.contains("oculto")) {
             planesCarrerasDiv.classList.remove("oculto");
             mostrarPlanesButton.textContent = "Ocultar Planes";
-            // Agrega los enlaces de descarga de PDF aquí
+
             const enlacesPDF = `
                 <p><a href="https://drive.google.com/file/d/1gMN864FzwCqNwO3ZisISdvUWrWdZDlAM/view?usp=drive_web&authuser=1" target="_blank">Descargar Plan De Tecnicatura Superior en Análisis de Sistemas(PDF)</a></p>
                 <p><a href="https://drive.google.com/file/d/1ErfX7Z3-aINa5oRR5yoAUFM16PsH_EdK/view?usp=drive_web&authuser=1" target="_blank">Descargar Tecnicatura Superior en Gestión Ambiental y Salud (PDF)</a></p>
@@ -21,12 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             planesCarrerasDiv.classList.add("oculto");
             mostrarPlanesButton.textContent = "Mostrar Planes";
-            planesCarrerasDiv.innerHTML = ''; // Elimina los enlaces cuando se ocultan
+            planesCarrerasDiv.innerHTML = ''; 
         }
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("CargarContenido", function() {
     const mostrarPlanButtons = document.querySelectorAll(".mostrar-plan-button");
 
     mostrarPlanButtons.forEach(function(button) {
@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Función para desplazarse hacia arriba suavemente
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -45,7 +44,6 @@ function scrollToTop() {
     });
 }
 
-// Mostrar u ocultar el botón cuando el usuario se desplaza
 window.onscroll = function() {
     var button = document.getElementById("scrollToTopButton");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -55,6 +53,21 @@ window.onscroll = function() {
     }
 }
 
-// Asignar la función scrollToTop al botón
 var scrollToTopButton = document.getElementById("scrollToTopButton");
 scrollToTopButton.addEventListener("click", scrollToTop);
+
+function enviarFormulario() {
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var mensaje = document.getElementById("mensaje").value;
+
+    alert("Mensaje enviado:\n\nNombre: " + nombre + "\nEmail: " + email + "\nMensaje: " + mensaje);
+}
+
+function actualizarContador() {
+    var mensaje = document.getElementById("mensaje");
+    var contador = document.getElementById("contador-caracteres");
+    var caracteresRestantes = 250 - mensaje.value.length;
+
+    contador.textContent = "Caracteres restantes: " + caracteresRestantes;
+  }
